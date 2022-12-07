@@ -1,0 +1,247 @@
+.contact-form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+.content-form-contacto {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  position: relative;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.form-contacto-left {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  background-color: var(--teal);
+  color: var(--grey-teal);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.form-contacto-right {
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.contacto-list {
+  list-style: none;
+}
+
+.contactoinfo {
+  padding: 1rem;
+}
+
+.contactolink{
+  color: var(--grey-teal);
+}
+
+.img_programmer{
+  width: 250px;
+  height:  250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../../public/programador.gif");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  text-align: center;
+}
+.content_img_pro{
+   width: 100%;
+  height:  100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn_img_programmer{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--grey-teal);
+  color: var(--teal);
+  border:none;
+  outline: none;
+  cursor: pointer;
+  padding: .5rem;
+  border-radius: 5px
+}
+.display_none{
+  display: none;
+}
+
+.form-title {
+  color: var(--teal);
+}
+
+.input-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  margin-top: 15px;
+}
+
+.form-input {
+  color: var(--grey-teal);
+  background-color: var(--teal);
+  padding: 13px 20px;
+  border: 1px solid var(--grey);
+  border-radius: 14px;
+  outline: none;
+  width: 100%;
+  position: relative;
+  margin-top: -20px;
+}
+
+.form-input::placeholder {
+  color: var(--grey);
+}
+
+.form-input::active {
+  color: var(--orange);
+}
+
+.form-input:focus {
+  border-color: var(--orange);
+}
+
+textarea.form-input {
+  width: 100%;
+  min-height: 100px;
+  height: 120px;
+  max-height: 200px;
+  resize: vertical;
+}
+
+textarea.form-input::-webkit-resizer {
+  display: none;
+}
+
+.form-input:focus:invalid {
+  border-color: red;
+}
+
+.form-btn {
+  position: relative;
+  width: 100%;
+  background: var(--orange);
+  color: var(--grey-teal);
+  display: flex;
+  outline: none;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 1rem;
+  padding: 13px 20px;
+  border-radius: 14px;
+  font-size: var(--fs-6);
+  text-transform: capitalize;
+  z-index: 1;
+  opacity: .7
+}
+
+.form-btn::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--orange);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.form-btn:hover {
+  background: var(--orange);
+  cursor: pointer;
+  opacity: 1
+}
+
+.form-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.reset {
+  color: var(--grey);
+}
+
+/* FORMULARIO */
+input[type="text"],
+input[type="email"],
+textarea,
+fieldset {
+  width: 100%;
+  border: 1px solid var(--teal);
+  box-sizing: border-box;
+}
+
+.input_invalid{
+  box-shadow: 0 0 1px 1px var(--orange) !important;
+}
+
+label{
+  margin-left: 10px;
+  margin-top: -15px;
+  color: var(--teal);
+}
+
+label>span{
+  color: var(--teal);
+}
+
+
+.err_msg{
+  display: block;
+  text-align: center;
+  color: red;
+  font-size: 12px;
+  margin-top: -15px
+}
+
+.msgContacto{
+  padding: .5rem;
+  text-align: center;
+  width: 100%;
+  color:var(--primary);
+  font-size: var(--fs-3);
+  background: var(--eerie-black-2);
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 375px) {
+
+}
+
+@media only screen and (min-width: 600px) {
+
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+
+@media only screen and (min-width: 992px) {
+  .content-form-contacto {
+    flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .content-form-contacto {
+    flex-direction: row;
+  }
+}
