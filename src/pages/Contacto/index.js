@@ -12,32 +12,26 @@ function index() {
   }
   const navigate = useNavigate()
   const {register, watch, handleSubmit, formState: {errors} } = useForm()
+  let msg = {}
+  const url = "https://hpportafolio.000webhostapp.com/api/saveMessage.php"
   const onSubmit = (data) => {
-    const form = document.getElementById("formcontact")
-    form.reset()
-    console.log(data)
-    // toast('Mensaje Enviado',{
-    //   duration:4000,
-    //   position: 'top-center',
-    //   style:{},
-    //   className:'',
-    //   icon:'*',
-    //   iconTheme:{
-    //     primary:'#000',
-    //     secondary:'#fff'
-    //   },
-    //   ariaProps:{
-    //     role: 'status',
-    //     'aria-live': 'polite',
-    //   }
-    // })
-
-    toast.success("Mensaje Enviado.")
+    
+    try{
+      msg = {
+        "name": data.username,
+        "email": data.email,
+        "message": data.messageUser,
+        "timestamp": 0
+      }
+      request(url,sendtoast,msg)
+    } catch (e) {
+      console.log(e)
+    }
     navigate("/")
   }
   const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/
-  const pattern = new RegExp('^[a-zA-ZñÑáéíóúÁÉÍÓÚ]+$')
-  const patternMessage = new RegExp('^[0-9a-zA-ZñÑáéíóúÁÉÍÓÚ]+$')
+  const pattern = new RegExp('^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$')
+  const patternMessage = new RegExp('^[0-9a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$')
   console.log(watch("name"), errors)
 
   return (
@@ -189,7 +183,27 @@ function index() {
       </section>
       <Footer />
     </>
-  );
+    );
 }
 
 export default index;
+
+
+function sendtoast(content){
+  const form = document.getElementById("formcontact")
+  form.reset()
+  console.log(content)
+  toast.success("Mensaje Enviado.")
+}
+
+async function request (url, _fn, msg) {
+  let request = await fetch(url, {
+                    "method": 'POST',
+                    "body": JSON.stringify(msg),
+                    "headers": {
+                        "Content-Type": 'application/json'
+                    }
+                })
+  let json = await request.json()
+  _fn(json)
+}

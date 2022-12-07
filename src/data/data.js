@@ -32,8 +32,8 @@ export const data = [
     languages: ["JAVASCRIPT", "HTML5", "REACT", "CSS3", "REDUX"],
     description:
       "Solución al reto de Programación de la web FrontendMentor.io. Se usó el localstorage para mantener las tareas generadas por la app(No Backend), Las tareas podian tener estatus normales, activas o completadas. Ademas se realizo el contexto para manejar el THEME de la app con la que se hace cambio Dark Mode y Light Mode",
-    urlgithub: "https://github.com/users/pimentelhector16/repos",
-    url: "https://github.com/users/pimentelhector16/repos/live",
+    urlgithub: "https://github.com/pimenteldev/ToDo",
+    url: "https://pimenteldevtodo.netlify.app/",
   },
   {
     id: 4,
