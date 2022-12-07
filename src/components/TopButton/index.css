@@ -1,0 +1,34 @@
+#topButton {
+  visibility: hidden;
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  bottom: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  outline: none;
+  border-radius: 10px;
+  font-size: 1.5rem;
+}
+
+#topButton::before {
+  	align-items: center;
+    background-color: var(--orange);
+    border-radius: 50%;
+    bottom: 0;
+    color: var(--grey-teal);
+    content: ">";
+    display: flex;
+    flex-direction: column;
+    height: 25px;
+    justify-content: center;
+    left: 0px;
+    margin-right: 10px;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    width: 25px;
+    transform: rotate(267deg);
+    border: 1px solid var(--grey)
+}
+
