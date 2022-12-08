@@ -1,6 +1,8 @@
 import React,{useState} from "react";
 import "./index.css";
 import { Link, Outlet } from "react-router-dom";
+import logo from './logo.png'
+import menu from './bars.svg'
 
 function index() {
   const [stateMenu, setStateMenu] = useState(false)
@@ -20,7 +22,7 @@ function index() {
           <div className="navbar-logo">
             <figure>
               <img
-                src="./logo.png"
+                src={logo}
                 alt="Héctor Pimentel Logo"
                 width="30px"
                 height="30px"
@@ -31,7 +33,7 @@ function index() {
           <button className="navbar-bars" onClick={handleMenu}>
             <figure>
               <img
-                src="./icons/bars.svg"
+                src={menu}
                 alt="Menu"
                 width="30px"
                 height="30px"

@@ -17,7 +17,7 @@ function index() {
             className="sobre_mi_img"
           />
           <p>
-            Me dedico al desarrollo de paginas web, sistemas automatizados y
+            Me dedico al desarrollo de páginas web, sistemas automatizados y
             aplicativos android en lo cual dispongo de más de 2 años de
             experiencia realizando proyectos institucionales, empresariales y
             personales.
@@ -67,8 +67,8 @@ function index() {
 
           <p>
             Al trabajar como Freelance tengo experiencia al momento de
-            identificar requerimientos basicos para emprender un nuevo proyecto,
-            permitiendome entender la logica de los procesos actuales que maneja
+            identificar requerimientos básicos para emprender un nuevo proyecto,
+            permitiendo entender la lógica de los procesos actuales que maneja
             el cliente y así poder brindar soluciones tanto para automatizar los
             procesos existentes como para crear nuevos que beneficien al cliente
             y le permitan realizar sus labores de forma eficiente y efectiva.
@@ -188,7 +188,7 @@ function index() {
             className="sobre_mi_img"
           />
           <i>
-            Sé amable con los ners.<br /> Lo más probable es 
+            Sé amable con los Nerds.<br /> Lo más probable es 
             que termines trabajando para uno. <br /> <strong>Bill Gates</strong>.
           </i>
       </section>

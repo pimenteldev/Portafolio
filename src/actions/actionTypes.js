@@ -1,1 +1,3 @@
 export const GET_INITIAL_DATA = "GET_INITIAL_DATA";
+export const GET_POST_BLOG_BY_ID = "GET_POST_BLOG_BY_ID";
+export const SET_POSTS_BLOG = "SET_POSTS_BLOG";
