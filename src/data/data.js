@@ -3,7 +3,7 @@ export const data = [
     id: 1,
     name: "Job Listings",
     company: "FrontendMentor.io",
-    logo: "./projects/joblisting.jpg",
+    logo: "/projects/joblisting.jpg",
     images: ["./projects/caney01.jpg", "./projects/caney2.jpg"],
     languages: ["REACT", "HTML5", "CSS3", "JAVASCRIPT", "REDUX"],
     description:
@@ -15,7 +15,7 @@ export const data = [
     id: 2,
     name: "Rock Paper Scissors",
     company: "FrontendMentor.io",
-    logo: "./projects/rockpaperscissors.jpg",
+    logo: "/projects/rockpaperscissors.jpg",
     images: ["./projects/caney01.jpg", "./projects/caney2.jpg"],
     languages: ["JAVASCRIPT", "HTML5", "CSS3", "GAME"],
     description:
@@ -27,7 +27,7 @@ export const data = [
     id: 3,
     name: "ToDo",
     company: "FrontendMentor.io",
-    logo: "./projects/todo.jpg",
+    logo: "/projects/todo.jpg",
     images: ["./projects/flag01.jpg", "./projects/flag.jpg"],
     languages: ["JAVASCRIPT", "HTML5", "REACT", "CSS3", "REDUX"],
     description:
@@ -40,7 +40,7 @@ export const data = [
     name: "Sistema El Caney",
     company: "Restaurante El Caney",
     logo: "./projects/caney.jpg",
-    images: ["./projects/caney01.jpg", "./projects/caney2.jpg"],
+    images: ["/projects/caney01.jpg", "./projects/caney2.jpg"],
     languages: ["JAVASCRIPT", "HTML5", "PHP", "CSS3", "SQL"],
     description:
       "Sistema interno que permite el control de inventario, ventas, proveedores y demás funciones requeridas por el cliente para su restaurante. Manejo de inventario, pedidos, reservas, comandas, reportes y todo lo que anteriormente se realizaba de forma manual.",
@@ -52,7 +52,7 @@ export const data = [
     name: "Buscame En Guate",
     company: "BuscameEnGuate",
     logo: "./projects/guate.jpg",
-    images: ["./projects/guate01.jpg", "./projects/guate2.jpg"],
+    images: ["/projects/guate01.jpg", "./projects/guate2.jpg"],
     languages: ["JAVASCRIPT", "HTML5", "PHP", "CSS3", "SQL"],
     description:
       "Desarrollado del sitio web segun las especificaciones del cliente, previamente se usaba wordpress de una forma no adecuada por lo que se decidio crear el proyecto desde cero para cumplir con los requerimientos del cliente. Ademas se desarrollo una plataforma de gestion interna del Sitio web y una plataforma de Cupones Digitales.",
@@ -63,7 +63,7 @@ export const data = [
     id: 6,
     name: "Sistema Merpre",
     company: "Mepre",
-    logo: "./projects/merpre.jpg",
+    logo: "/projects/merpre.jpg",
     images: ["./projects/merpre01.jpg", "./projects/merpre2.jpg"],
     languages: ["JAVASCRIPT", "HTML5", "PHP", "CSS3", "SQL", "ANDROID", "JAVA"],
     description:
@@ -72,3 +72,42 @@ export const data = [
     url: "https://mepre.com/",
   },
 ];
+
+export const blogData = [
+    {
+      "id": 1,
+      "title": "Desarrollo de un Formulario",
+      "description": "Guia de como es la forma correcta de hacer un formulario en Html, css y javascript",
+      "date": "Enero 23, 2022",
+      "categories": ["Frontend"],
+      "body": "Como se pueden hacer pruebas para saber si nuestra web es adaptableComo se pueden hacer pruebas para saber si nuestra web es adaptableComo se pueden hacer pruebas para saber si nuestra web es adaptableComo se pueden hacer pruebas para saber si nuestra web es adaptableComo se pueden hacer pruebas para saber si nuestra web es adaptableComo se pueden hacer pruebas para saber si nuestra web es adaptableComo se pueden hacer pruebas para saber si nuestra web es adaptable",
+      "image": "/post01.jpg",
+    },
+    {
+      "id": 2,
+      "title": "Manejo de Sesiones en PHP",
+      "description": "Estructurando un codigo PHP para gestion de sesiones en un sistema web",
+      "date": "Febrero 12, 2022",
+      "categories": ["Backend"],
+      "body": "Como se pueden hacer pruebas para saber si nuestra web es adaptableComo se pueden hacer pruebas para saber si nuestra web es adaptableComo se pueden hacer pruebas para saber si nuestra web es adaptableComo se pueden hacer pruebas para saber si nuestra web es adaptableComo se pueden hacer pruebas para saber si nuestra web es adaptableComo se pueden hacer pruebas para saber si nuestra web es adaptableComo se pueden hacer pruebas para saber si nuestra web es adaptable",
+      "image": "/post02.jpg",
+    },
+    {
+      "id": 3,
+      "title": "Diseño Responsive",
+      "description": "¿Como se pueden hacer pruebas para saber si nuestra web es adaptable?",
+      "date": "Octubre 16, 2022",
+      "categories": ["Design","Frontend"],
+      "body": "Como se pueden hacer pruebas para saber si nuestra web es adaptableComo se pueden hacer pruebas para saber si nuestra web es adaptableComo se pueden hacer pruebas para saber si nuestra web es adaptableComo se pueden hacer pruebas para saber si nuestra web es adaptableComo se pueden hacer pruebas para saber si nuestra web es adaptableComo se pueden hacer pruebas para saber si nuestra web es adaptableComo se pueden hacer pruebas para saber si nuestra web es adaptable",
+      "image": "/post03.jpg",
+    },
+    {
+      "id": 4,
+      "title": "API en Python",
+      "description": "Realiza un backend en tu pc para crear los ENDPOINTS de una app",
+      "date": "Marzo 11, 2022",
+      "categories": ["Backend"],
+      "body": "<h1>Example lists</h1><hr />This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout. <h2>This is an example</h2> unordered list: <ul><li>First list</li> <li>itemSecond list item with a longer description</li><li>Third list item to close it out</li></ul><hr />",
+      "image": "/post04.jpg",
+    },
+]

@@ -1,13 +1,17 @@
 .blog_content{
-	position: relative;
-	width: 100%;
-	height: 100%;
+	width: 90%;
+	padding: 1rem;
+	margin: 0 auto;
 }
 
-.blog{
-	width: 100%;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.blog-banner-box { height: auto; }
+
+.blog-posts { margin-bottom: 10px; }
+
+.blog-posts-list {
+	margin-top: 1rem;
+  	display: grid;
+  	grid-template-columns: 1fr 1fr;
+  	gap: 20px;
+  	list-style: none;
 }

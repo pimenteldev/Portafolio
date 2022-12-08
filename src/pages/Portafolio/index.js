@@ -41,7 +41,7 @@ function index() {
               projects.map((project) => {
                 return (
                   <li key={project.id} className="card_project">
-                    <div>
+                    <figure className="card-project-box">
                       <img
                         src={project.logo}
                         alt={project.id}
@@ -49,8 +49,10 @@ function index() {
                         width="280px"
                         height="280px"
                         className="card_project_image"
+                        loading="lazy"
                       />
-                    </div>
+                    </figure>
+                      
                     <div className="body_card_project">
                       <span className="card_project_company">
                         {project.company}
