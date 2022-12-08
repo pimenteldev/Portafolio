@@ -10,6 +10,7 @@ header {
   position: relative;
   font-family: "montserrat700";
 }
+
 header::before {
   height: 100%;
   width: 100%;
@@ -33,7 +34,35 @@ header::before {
   color: var(--orange);
   font-size: 25px;
   font-weight: 700;
-  text-shadow: 0px 1px 1px hsla(0, 0%, 0%, 0.42);
+  text-shadow: 0px 1px 1px hsla(0, 0%, 0%, .4);
+}
+
+header ul li {
+  margin-top: 1rem;
+  list-style-type: none;
+  margin-left: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+}
+
+header ul li:hover{
+  background-color: var(--orange);
+  border-radius: 50%;
+}
+
+.header_social  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header_social ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media only screen and (max-width: 600px) {

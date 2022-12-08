@@ -10,7 +10,7 @@ function index() {
 
       <section className="sobre_mi_text">
           <img
-            src="./avatar.jpg"
+            src="./avatar2.png"
             alt="avatar"
             width="180px"
             height="180px"
@@ -87,7 +87,7 @@ function index() {
         <ul className="service-list">
           <li className="service-item">
             <div className="service-icon-box">
-              <img src="./icon-design.svg" alt="design icon" width="80px" />
+              <img src="./icon-design.svg" alt="design icon" width="90px" height="90px" />
             </div>
 
             <div className="service-content-box">
@@ -105,7 +105,7 @@ function index() {
               <img
                 src="./icon-dev.svg"
                 alt="Web development icon"
-                width="80px"
+                width="90px" height="90px"
               />
             </div>
 
@@ -122,7 +122,7 @@ function index() {
 
           <li className="service-item">
             <div className="service-icon-box">
-              <img src="./icon-app.svg" alt="mobile app icon" width="80px" />
+              <img src="./icon-app.svg" alt="mobile app icon" width="90px" height="90px" />
             </div>
 
             <div className="service-content-box">
@@ -138,7 +138,7 @@ function index() {
 
           <li className="service-item">
             <div className="service-icon-box analist">
-              <img src="./icon-analist.svg" alt="camera icon" width="90px" />
+              <img src="./icon-analist.svg" alt="camera icon" width="90px" height="90px"/>
             </div>
 
             <div className="service-content-box">
@@ -181,7 +181,7 @@ function index() {
       <section className="sobre_mi_phrase">
  
           <img
-            src="./gates.jpg"
+            src="./gates2.png"
             alt="Bill Gates"
             width="150px"
             height="150px"

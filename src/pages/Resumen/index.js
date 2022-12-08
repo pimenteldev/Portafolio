@@ -60,7 +60,7 @@ function index() {
 
             <p className="timeline-text">
               Sitio Web - Aplicación Android de prestamos de dinero por cuotas,
-              Conectadas mediante una Api que permite la comucicación entre el
+              Conectadas mediante una Api que permite la comunicación entre el
               sitio y los dispositivos.
             </p>
           </li>

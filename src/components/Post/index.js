@@ -6,7 +6,7 @@ function index (props) {
   const {post} = props
   return (<>
     <li className="blog-post-item">
-      <Link to={"/blog/"+post.id}>
+      <Link to={"/blog/"+post.id} className="post_a">
         <figure className="blog-banner-box">
           <img src={window.location.href+post.image} alt={post.title} loading="lazy" />
         </figure>
