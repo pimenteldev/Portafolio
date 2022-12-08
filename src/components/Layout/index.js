@@ -32,7 +32,7 @@ export default function BaseLayout() {
         </div>
         <TopButton theme={themeName} />
         <Toaster 
-          position="bottom-center"
+          position="top-center"
           reverseOrder={false}
           gutter={12}
           containerClassName=""
@@ -46,7 +46,7 @@ export default function BaseLayout() {
               color: '#d6e4e5',
             },
             success:{
-              duration:3000,
+              duration:5000,
               theme:{
                 primary:'green',
                 secondary:'black',

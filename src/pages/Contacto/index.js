@@ -4,35 +4,34 @@ import { useForm } from 'react-hook-form'
 import Footer from "../../components/Footer";
 import {toast} from "react-hot-toast";
 import {useNavigate} from "react-router-dom"
+import emailjs from 'emailjs-com'
 
 function index() {
+
   const [stateProgrammer, setStateProgrammer] = useState(false)
   const handleProgrammer = () => {
     stateProgrammer ? setStateProgrammer(false) : setStateProgrammer(true)
   }
   const navigate = useNavigate()
-  const {register, watch, handleSubmit, formState: {errors} } = useForm()
-  let msg = {}
-  const url = "https://hpportafolio.000webhostapp.com/api/saveMessage.php"
+  const {register, handleSubmit, formState: {errors} } = useForm()
+  
   const onSubmit = (data) => {
-    
-    try{
-      msg = {
-        "name": data.username,
-        "email": data.email,
+      emailjs.send('service_portafolio',"template_pizgnc6",{
+        "from_name": data.username,
+        "to_name": "Héctor",
         "message": data.messageUser,
-        "timestamp": 0
-      }
-      request(url,sendtoast,msg)
-    } catch (e) {
-      console.log(e)
-    }
+        "reply_to": data.email
+        console.log('Success!', response.status, response.text)
+        toast.success("Mensaje Enviado.")
+      }, (e) => {
+        toast.error("Error, Mensaje no Enviado.")  
+        console.log(e)
+      })
     navigate("/")
   }
   const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/
-  const pattern = new RegExp('^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$')
-  const patternMessage = new RegExp('^[0-9a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$')
-  console.log(watch("name"), errors)
+  const pattern = new RegExp('^[a-zA-ZñÑáéíóúÁÉÍÓÚ ,.]+$')
+  const patternMessage = new RegExp('^[0-9a-zA-ZñÑáéíóúÁÉÍÓÚ ,.]+$')
 
   return (
     <>
@@ -153,7 +152,7 @@ function index() {
                     },
                   pattern: {
                     value: patternMessage,
-                    message: "El campo no debe contener caracteres especiales o números",
+                    message: "El campo no debe contener caracteres especiales(!Saltos de Linea)",
                   },
                    minLength:{
                       value:10,
@@ -187,23 +186,3 @@ function index() {
 }
 
 export default index;
-
-
-function sendtoast(content){
-  const form = document.getElementById("formcontact")
-  form.reset()
-  console.log(content)
-  toast.success("Mensaje Enviado.")
-}
-
-async function request (url, _fn, msg) {
-  let request = await fetch(url, {
-                    "method": 'POST',
-                    "body": JSON.stringify(msg),
-                    "headers": {
-                        "Content-Type": 'application/json'
-                    }
-                })
-  let json = await request.json()
-  _fn(json)
-}

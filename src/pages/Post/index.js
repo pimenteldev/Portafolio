@@ -5,7 +5,7 @@ import {blogData} from "../../data/data"
 import {useParams, Link, Outlet} from 'react-router-dom'
 import { useSelector, useDispatch } from "react-redux"
 import {GET_POST_BLOG_BY_ID, SET_POSTS_BLOG} from '../../actions/actionTypes'
-
+import DOMPurify from "dompurify"
 function index() {
   let {id} = useParams()
   const dispatch = useDispatch()
@@ -33,14 +33,14 @@ function index() {
       
       {
         posts && posts.map((post, index) => <div key={index}>
-          <div>{post.title}</div>
-          <div>{post.date}</div>
-          <div className="blog-category">{post.categories && post.categories.map((category,index)=> <span key={index} className="blog-category-item">{category}</span>)}</div>
-          <div>{post.description}</div>
           <figure className="blog-banner-box">
             <img src={window.location.origin+"/blog"+post.image} alt={post.title} loading="lazy" />
           </figure>
-          <div id="post_body">{post.body}</div>
+          <div className="blog_post_date">{post.date}</div>
+          <div className="blog_post_title">{post.title}</div>
+          <div className="blog_post_category">{post.categories && post.categories.map((category,index)=> <span key={index} className="blog-category-item">{category}</span>)}</div>
+          <div className="blog_post_description">{post.description}</div>
+          <div className="blog_post_body" dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(post.body)}}></div>
           
         </div>)
       }

@@ -28,7 +28,7 @@ function index() {
                 height="30px"
               />
             </figure>
-            <h2 className="navbar-logo-title"><small>PimentelDev</small></h2>
+            <h2 className="navbar-logo-title">PimentelDev</h2>
           </div>
           <button className="navbar-bars" onClick={handleMenu}>
             <figure>
