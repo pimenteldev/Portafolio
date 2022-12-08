@@ -21,7 +21,7 @@ function index() {
         "to_name": "Héctor",
         "message": data.messageUser,
         "reply_to": data.email
-        },"GajTZzzQEQowXYmm-").then((response) =>{
+        },"key").then((response) =>{
         console.log('Success!', response.status, response.text)
         toast.success("Mensaje Enviado.")
       }, (e) => {
